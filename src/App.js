@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import axios from "axios";
+import { useEffect, useState } from "react";
+import "./App.css";
+import ListIssues from "./components/ListIssues";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [issues, setIssues] = useState([]);
+
+	useEffect(() => {
+		axios.get("https://api.github.com/repos/facebook/react/issues").then((response) => setIssues(response.data));
+	}, []);
+
+	return (
+		<div className="container">
+			<div className="row my-5 d-flex justify-content-center">
+				<ListIssues issues={issues}></ListIssues>
+			</div>
+		</div>
+	);
 }
 
 export default App;
