@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Deployed URL
+
+This project was deployed on [Github Issues](https://github-issues-page-infinity-scroll.netlify.app/).
+
 ## Available Scripts
 
 In the project directory, you can run:
