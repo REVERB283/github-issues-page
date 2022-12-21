@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Deployed URL
 
-This project was deployed on [Github Issues](https://github-issues-page-infinity-scroll.netlify.app/).
+This project was deployed on [Infinite Issues](https://infinite-issues.netlify.app/).
 
 ## Available Scripts
 
